@@ -1,0 +1,199 @@
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: var(--transition-smooth);
+}
+
+.card:hover {
+  box-shadow: 0 12px 40px rgba(200, 138, 54, 0.06);
+  transform: translateY(-2px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reference {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-gold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.bookmarkBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  transition: var(--transition-smooth);
+}
+
+.bookmarkBtn:hover {
+  background: rgba(200, 138, 54, 0.08);
+  color: var(--accent-gold);
+}
+
+.activeBookmark .bookmarkIcon {
+  fill: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.sanskritContainer {
+  padding: 4px 0;
+  border-top: 1px dashed rgba(229, 215, 194, 0.4);
+  border-bottom: 1px dashed rgba(229, 215, 194, 0.4);
+}
+
+.sanskrit {
+  font-family: var(--font-sans); /* Fallback, fits well styled */
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.transliterationContainer {
+  padding: 0 4px;
+}
+
+.transliteration {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-style: italic;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.meaningContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meaningTitle {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  letter-spacing: 0.05em;
+}
+
+.meaning {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  text-align: left;
+}
+
+.guidanceBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #fffdf9;
+  border: 1px solid rgba(200, 138, 54, 0.15);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+}
+
+.lotusIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding-top: 2px;
+  animation: gentlePulse 3s ease-in-out infinite;
+}
+
+.guidanceText {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #7c4c11;
+}
+
+@keyframes gentlePulse {
+  0% { transform: scale(0.96); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(0.96); }
+}
+
+.wordMeaningsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  background: rgba(253, 251, 247, 0.7);
+  border: 1px solid rgba(200, 138, 54, 0.12);
+  border-radius: var(--radius-md);
+}
+
+.sectionTitle {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  letter-spacing: 0.05em;
+}
+
+.wordMeaningsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.wordMeaningPair {
+  display: inline-flex;
+  align-items: center;
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 12.5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: var(--transition-smooth);
+}
+
+.wordMeaningPair:hover {
+  border-color: rgba(200, 138, 54, 0.3);
+  box-shadow: 0 4px 10px rgba(200, 138, 54, 0.05);
+  transform: translateY(-1px);
+}
+
+.sanskritWord {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: #7c4c11;
+}
+
+.separator {
+  margin: 0 6px;
+  color: rgba(200, 138, 54, 0.4);
+  font-weight: 300;
+}
+
+.englishTranslation {
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+}

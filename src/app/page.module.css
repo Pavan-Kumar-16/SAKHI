@@ -1,0 +1,60 @@
+.bannerSection {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px 20px;
+}
+
+.bannerImageWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.bannerImg {
+  object-fit: cover;
+  object-position: 50% 25%;
+  /* offsets vertical alignment to frame Lord Krishna and Arjuna */
+}
+
+/* Overlay to fade the painting smoothly into the cream application background */
+.bannerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    linear-gradient(180deg, rgba(253, 251, 247, 0.1) 0%, rgba(251, 249, 244, 0.75) 75%, var(--bg-app) 100%),
+    linear-gradient(0deg, rgba(200, 138, 54, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.bannerTextContainer {
+  position: relative;
+  z-index: 5;
+  color: var(--text-primary);
+  max-width: 85%;
+  margin-bottom: 2px;
+}
+
+.greeting {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.subGreeting {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-top: 5px;
+}

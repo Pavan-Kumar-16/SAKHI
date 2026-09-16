@@ -1,0 +1,124 @@
+.form {
+  display: flex;
+  gap: 10px;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border-light);
+  align-items: center;
+  z-index: 15;
+  width: 100%;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid rgba(229, 215, 194, 0.8);
+  border-radius: 25px;
+  padding: 2px 4px 2px 14px;
+  transition: var(--transition-smooth);
+}
+
+.inputContainer:focus-within {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 3px rgba(200, 138, 54, 0.08);
+}
+
+.recording {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.08);
+}
+
+.input {
+  border: none;
+  background: transparent;
+  outline: none;
+  flex: 1;
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  color: var(--text-primary);
+  padding: 8px 0;
+  width: 100%;
+}
+
+.input::placeholder {
+  color: #a08c80;
+}
+
+.micBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.micBtn:hover {
+  background: rgba(200, 138, 54, 0.08);
+  color: var(--accent-gold);
+}
+
+.micActive {
+  color: #ef4444 !important;
+  background: rgba(239, 68, 68, 0.08) !important;
+  animation: micPulse 1.5s ease-in-out infinite;
+}
+
+.sendBtn {
+  background: var(--accent-gold-gradient);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 10px rgba(217, 119, 6, 0.25);
+  flex-shrink: 0;
+}
+
+.sendBtn:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(217, 119, 6, 0.3);
+}
+
+.sendBtn:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.sendBtn:disabled {
+  background: #e5dfd8;
+  color: #a09085;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.sendIcon {
+  transform: translate(1px, -0.5px);
+}
+
+@keyframes micPulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
