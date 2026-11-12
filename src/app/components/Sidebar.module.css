@@ -1,0 +1,149 @@
+.sidebar {
+  width: 250px;
+  min-width: 250px;
+  height: 100vh;
+  background-color: #faf5ee;
+  border-right: 1px solid #ede3d4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 40;
+  user-select: none;
+}
+
+/* Mobile drawer overlay */
+.mobileOverlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -270px;
+    width: 260px;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+    transition: left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .sidebarOpen {
+    left: 0;
+  }
+
+  .mobileOverlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(28, 18, 10, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 35;
+  }
+}
+
+.topSection {
+  padding: 28px 20px 16px 20px;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+  cursor: pointer;
+}
+
+.lotusIconSvg {
+  margin-bottom: 6px;
+  filter: drop-shadow(0 2px 4px rgba(217, 119, 6, 0.2));
+}
+
+.logoTitle {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #3b2416;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.logoSubtitle {
+  font-family: var(--font-sans);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  color: #9c7b64;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 11px 16px;
+  border-radius: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #6e5c50;
+  text-align: left;
+  transition: all 0.2s ease-in-out;
+}
+
+.navItem:hover {
+  background: rgba(250, 237, 224, 0.6);
+  color: #a86224;
+}
+
+.navItemActive {
+  background: #faede0 !important;
+  color: #9c5417 !important;
+  font-weight: 600;
+}
+
+.navIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+}
+
+.navItemActive .navIconWrapper {
+  color: #b45309;
+}
+
+/* Bottom chariot illustration */
+.bottomSection {
+  position: relative;
+  width: 100%;
+  padding: 0 0 10px 0;
+  margin-top: auto;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.illustrationWrapper {
+  width: 100%;
+  height: 150px;
+  position: relative;
+}
+
+.chariotSvg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
